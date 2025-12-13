@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "claim-fraud-detection"
+version = "0.1.0"
+description = "AI-powered fraud detection system for medical claim forms"
+authors = ["Antigravity <antigravity@deepmind.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = "^0.27.0"
+streamlit = "^1.31.0"
+pandas = "^2.2.0"
+numpy = "^1.26.0"
+scikit-learn = "^1.4.0"
+pymupdf = "^1.23.0"  # For PDF extraction
+pytesseract = "^0.3.10" # For OCR
+python-multipart = "^0.0.9" # For file uploads in FastAPI
+shap = "^0.44.0" # For explainability
+requests = "^2.31.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.0"
+httpx = "^0.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
