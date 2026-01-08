@@ -1,6 +1,12 @@
 # api/index.py
+import sys
+from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from backend.app.main import app
 
 app = FastAPI(title="Claim Fraud Detection API")
 
